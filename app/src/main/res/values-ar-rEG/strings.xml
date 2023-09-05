@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TODO_APP</string>
+    <string name="edit_task">تعديل المهمه</string>
+    <string name="task_title">عنوان المهمه</string>
+    <string name="task_details">تفاصيل المهمه</string>
+    <string name="select_time">اختر الوقت</string>
+    <string name="tasks">المهمات</string>
+    <string name="settings">الاعدادات</string>
+    <string name="enter_your_task">ادخل المهمه</string>
+    <string name="enter_description">ادخل وصف المهمه</string>
+    <string name="add_task">اضف مهمتك</string>
+    <string name="add_new_task">اضف مهمه جديده</string>
+    <string name="done">تم</string>
+    <string name="language">اللغات</string>
+    <string name="mode">الوضع</string>
+    <string name="undone">لم تتم</string>
+    <string name="delete">مسح</string>
+    <string name="save_changes">حفظ التعديلات</string>
+    <string name="ok">نعم</string>
+    <string name="no">لا</string>
+    <string name="do_you_want_save_changes">هل تريد حفظ التعديلات ؟</string>
+    <string name="delete_this_task">مسح المهمه ؟</string>
+    <string name="to_do_list">المهمات</string>
+    <array name="lang">
+        <item>
+            افتراضي
+        </item>
+        <item>
+            الانجليزيه
+        </item>
+        <item>
+            العربيه
+        </item>
+    </array>
+    <array name="mode">
+        <item>
+            افتراضي
+        </item>
+        <item>
+            وضع النهار
+        </item>
+        <item>
+            الوضع الليلي
+        </item>
+    </array>
+</resources>
