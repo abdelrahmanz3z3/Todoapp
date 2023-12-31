@@ -5,11 +5,13 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.todo_app.R
 import com.example.todo_app.databinding.ActivityHomeBinding
-import com.example.todo_app.ui.settingsfrag.SettingsFragment
-import com.example.todo_app.ui.taskfrag.BottomSheetFragment
-import com.example.todo_app.ui.taskfrag.TasksFragment
+import com.example.todo_app.ui.home.fragments.settingsfragment.SettingsFragment
+import com.example.todo_app.ui.home.fragments.bottomsheetfragment.BottomSheetFragment
+import com.example.todo_app.ui.home.fragments.taskfragment.TasksFragment
 import com.google.android.material.snackbar.Snackbar
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class HomeActivity : AppCompatActivity() {
     lateinit var viewBinding: ActivityHomeBinding
     var fr: TasksFragment? = null
