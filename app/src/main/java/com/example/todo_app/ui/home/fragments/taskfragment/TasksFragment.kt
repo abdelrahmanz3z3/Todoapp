@@ -49,6 +49,7 @@ class TasksFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
        initViews()
+        observe()
     }
 
     private fun observe() {
@@ -85,7 +86,7 @@ class TasksFragment : Fragment() {
     }
 
     private fun initViews() {
-        adapter = TasksAdapter(listOf())
+        adapter = com.example.todo_app.ui.home.fragments.taskfragment.TasksAdapter(listOf())
         viewBinding.rec.adapter = adapter
         adapter?.onTrueClickListener = TasksAdapter.OnItemClickListener { position, tasks ->
             tasks.isDone = true
@@ -139,7 +140,6 @@ class TasksFragment : Fragment() {
         onDelete()
         onUndo()
         loadTasks()
-        observe()
     }
 
     private fun onUndo() {

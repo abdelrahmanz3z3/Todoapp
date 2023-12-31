@@ -13,16 +13,10 @@ import com.example.todo_app.databinding.ItemTaskBinding
 import java.util.Calendar
 
 class TasksAdapter(var tasks: List<Task?>) : Adapter<TasksAdapter.ViewHolder>() {
+    private var deletedPosition:Int?=null
     class ViewHolder(val itemBinding: ItemTaskBinding) : RecyclerView.ViewHolder(itemBinding.root) {
         fun bind(task: Task?) {
-            itemBinding.textView.text = task?.taskName.toString()
-            itemBinding.textView3.text = task?.description.toString()
-            val time = task?.date.toString()
-            val c = Calendar.getInstance()
-            c.timeInMillis = time.toLong()
-            itemBinding.textView2.text =
-                "${c.get(Calendar.DAY_OF_MONTH)} / ${c.get(Calendar.MONTH) + 1} / ${c.get(Calendar.YEAR)}"
-
+            itemBinding.task = task
             if (task?.isDone == true) {
                 itemBinding.imageButton.visibility = INVISIBLE
                 itemBinding.done.visibility = VISIBLE
@@ -38,6 +32,7 @@ class TasksAdapter(var tasks: List<Task?>) : Adapter<TasksAdapter.ViewHolder>() 
             }
         }
     }
+
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
